@@ -4,8 +4,8 @@ Data Modelling with Cassandra (based on User Activity Logs)
 
 ### Getting Started
 Download the project:
-You can download it as zip and unpack the files or you can clone the 
-repository from our github link
+You can download it as zip and unpack the files or you can clone this 
+repository
 
 #### Prerequisites
 - Apache Cassandra from *Datastax*
