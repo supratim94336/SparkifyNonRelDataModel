@@ -58,15 +58,15 @@ Go inside the project directory
 ```
 $ cd project_dir_name
 ```
-Run the pre-processing script
+Run the pre-processing script (you need it only once)
 ```
 $ python preprocess_files.py
 ```
-Run the table creation script
+Run the table creation script (resetting the tables)
 ```
 $ python create_tables.py
 ```
-Run the database population script
+Run the database population script (inserting the records)
 ```
 $ python etl.py
 ```
