@@ -8,32 +8,32 @@ You can download it as zip and unpack the files or you can clone the
 repository from our github link
 
 #### Prerequisites
-- Apache Cassandra from Datastax 
+- Apache Cassandra from *Datastax*
 (https://academy.datastax.com/planet-cassandra/cassandra) or
-- Apache Cassandra from Apache (http://cassandra.apache.org/download/)
+- Apache Cassandra from *Apache* (http://cassandra.apache.org/download/)
 - Python 3.5 or above (https://www.python.org/downloads/)
 
 #### Installing and starting Apache Cassandra
 If you are downloading Cassandra from Apache foundation Website
-- Step 1: Install Java
-- Step 2: Download and extract Cassandra
-- Step 3: Start Terminal
-- Step 4:   
+* Step 1: Install Java
+* Step 2: Download and extract Cassandra
+* Step 3: Start Terminal
+* Step 4:   
         - $ gedit .bashrc (update .bashrc)   
         - add lines:   
           - Line 1. EXPORT CASSANDRA_HOME = 
           cassandra_extracted_directory    
           - Line 2. EXPORT PATH = $PATH:$CASSANDRA_HOME/bin  
         - save and close .bashrc
-- Step 4: $ cassandra -f (start)
+* Step 4: $ cassandra -f (start)
 
 or
 If you are downloading Cassandra from Datastax Website
-- Step 1: Install Java
-- Step 2: Download and extract Cassandra v3.9.0/v3.8.0 Tarball
-- Step 3: Extract the tarball file into a directory   
-- Step 4: run Terminal
-- Step 5:   
+* Step 1: Install Java
+* Step 2: Download and extract Cassandra v3.9.0/v3.8.0 Tarball
+* Step 3: Extract the tarball file into a directory   
+* Step 4: run Terminal
+* Step 5:   
         - $ cd cassandra_extracted_directory/bin  
         - $ ./cassandra
 
@@ -82,18 +82,18 @@ You can dump your user_activity_log .csv formatted files inside the data
 
 ### Example Queries
 Once you are done setting up you can get started with some exciting 
-queries like  
--- Who are the users who heard a particular song
+queries like:  
+Who are the users who heard a particular song
 ```
 Yet to be written
 ```
 
--- What an user heard in a particular session
+What an user heard in a particular session
 ```
 Yet to be written
 ```
 
--- What was the song heard by a user in a particular session
+What was the song heard by a user in a particular session
 ```
 Yet to be written
 ```
