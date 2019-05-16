@@ -25,7 +25,7 @@ If you are downloading Cassandra from Apache foundation Website
           cassandra_extracted_directory    
           - Line 2. EXPORT PATH = $PATH:$CASSANDRA_HOME/bin  
         - save and close .bashrc
-* Step 4: $ cassandra -f (start)
+* Step 5: $ cassandra -f (start)
 
 or
 If you are downloading Cassandra from Datastax Website
