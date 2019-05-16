@@ -66,12 +66,16 @@ def main():
     cluster = Cluster()
     session = cluster.connect()
     keyspace = "sparkify"
+
     # create the database
     session = create_database(session, keyspace)
+
     # drop the tables
     drop_tables(session, keyspace)
+
     # create the tables
     create_tables(session, keyspace)
+
     # close the connection
     session.shutdown()
     cluster.shutdown()
