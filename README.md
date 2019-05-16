@@ -34,7 +34,7 @@ If you are downloading Cassandra from Datastax Website
 - Step 3: Extract the tarball file into a directory   
 - Step 4: run Terminal
 - Step 5:   
-        - $ cd cassandra_extracted_directory/bin
+        - $ cd cassandra_extracted_directory/bin  
         - $ ./cassandra
 
 #### Installing Python Dependencies
@@ -68,6 +68,10 @@ $ python create_tables.py
 Run the database population script
 ```
 $ python etl.py
+```
+Test the queries
+```
+$ jupyter notebook test.ipynb
 ```
 ### View and Analyze
 You can you use the test.ipynb notebook to query according to your needs
