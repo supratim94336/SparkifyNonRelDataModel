@@ -83,16 +83,19 @@ You can dump your user_activity_log .csv formatted files inside the data
 ### Example Queries
 Once you are done setting up you can get started with some exciting 
 queries like  
--- Who are the most heard artists in Sparkify
+-- Who are the users who heard a particular song
 ```
-SELECT a.name, COUNT(*) FROM songplays s JOIN artists a ON s.artist_id=a.artist_id
-GROUP BY a.name ORDER BY COUNT(*) DESC
+Yet to be written
 ```
 
--- What are most heard songs in Sparkify
+-- What an user heard in a particular session
 ```
-SELECT a.title, COUNT(*) FROM songplays s JOIN songs a ON s.song_id=a.song_id
-GROUP BY a.title ORDER BY COUNT(*) DESC
+Yet to be written
+```
+
+-- What was the song heard by a user in a particular session
+```
+Yet to be written
 ```
 ### Authors
 * **Supratim Das** - *Initial work*
