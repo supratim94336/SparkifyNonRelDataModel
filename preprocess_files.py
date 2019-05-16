@@ -17,7 +17,7 @@ def preprocess_files(all_events_file):
     data_dir = os.path.join(cur_dir, 'event_data')
 
     # Create a for loop to create a list of files and collect each
-    # filepath
+    # file_path
     file_path_list = []
     for root, dirs, files in os.walk(data_dir):
         # join the file path and roots with the subdirectories using
@@ -26,23 +26,24 @@ def preprocess_files(all_events_file):
 
     full_data_rows_list = []
 
-    # for every filepath in the file path list
+    # for every file_path in the file path list collect records
     for f in file_path_list:
 
         # reading csv file
         with open(f, 'r', encoding='utf8', newline='') as csvfile:
+
             # creating a csv reader object
             csvreader = csv.reader(csvfile)
             next(csvreader)
 
             # extracting each data row one by one and append it
             for line in csvreader:
-                # print(line)
                 full_data_rows_list.append(line)
 
     csv.register_dialect('myDialect', quoting=csv.QUOTE_ALL,
                          skipinitialspace=True)
 
+    # create one file with all the records
     with open(all_events_file, 'w', encoding='utf8',
               newline='') as f:
         writer = csv.writer(f, dialect='myDialect')
@@ -59,7 +60,8 @@ def preprocess_files(all_events_file):
 
 
 def main():
-    preprocess_files(all_events_file="all_events_file.csv")
+    file_path = "all_events_file.csv"
+    preprocess_files(file_path)
 
 
 if __name__ == '__main__':
