@@ -28,6 +28,7 @@ If you are downloading Cassandra from Apache foundation Website
 * Step 5: $ cassandra -f (start)
 
 or
+
 If you are downloading Cassandra from Datastax Website
 * Step 1: Install Java
 * Step 2: Download and extract Cassandra v3.9.0/v3.8.0 Tarball
@@ -77,8 +78,8 @@ $ jupyter notebook test.ipynb
 You can you use the test.ipynb notebook to query according to your needs
 
 ### About the data
-You can dump your user_activity_log .csv formatted files inside the data
- folder
+You can dump your user_activity_log in terms of .csv formatted files 
+inside the data folder
 
 ### Example Queries
 Once you are done setting up you can get started with some exciting 
