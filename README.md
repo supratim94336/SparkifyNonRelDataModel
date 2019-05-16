@@ -1,6 +1,6 @@
 ## Sparkify Non-Relational Data Model
 
-Data Modelling with Postgres (based on Songs Metadata and User Activity Logs)
+Data Modelling with Cassandra (based on User Activity Logs)
 
 ### Getting Started
 Download the project:
