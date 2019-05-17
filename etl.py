@@ -112,12 +112,11 @@ def process_song_data(session, file_path, table):
             query = "INSERT INTO " + table + \
                     " (song, " \
                     "user_id, " \
-                    "session_id, " \
                     "user_first_name, " \
                     "user_last_name)"
-            query = query + " VALUES (%s, %s, %s, %s, %s)"
+            query = query + " VALUES (%s, %s, %s, %s)"
             session.execute(query, (
-            line[9], int(line[10]), int(line[8]), line[1], line[4]))
+            line[9], int(line[10]), line[1], line[4]))
 
 
 def main():
@@ -131,7 +130,7 @@ def main():
         print(e)
 
     # define file path of records
-    file_path = "all_events_file.csv"
+    file_path = "events_data_new.csv"
 
     # process the files
     try:

@@ -60,7 +60,7 @@ def preprocess_files(all_events_file):
 
 
 def main():
-    file_path = "all_events_file.csv"
+    file_path = "events_data_new.csv"
     preprocess_files(file_path)
 
 

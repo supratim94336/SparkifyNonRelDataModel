@@ -84,19 +84,23 @@ inside the data folder
 ### Example Queries
 Once you are done setting up you can get started with some exciting 
 queries like:  
-Who are the users who heard a particular song
+Who were the artist, song, and its duration in a particular session and
+in order 4th
 ```
-Yet to be written
-```
-
-What an user heard in a particular session
-```
-Yet to be written
+SELECT artist, song_title, song_duration FROM music_app_session_history 
+WHERE session_id=338 AND item_in_session=4
 ```
 
-What was the song heard by a user in a particular session
+What artist and his/her song did a user hear in particular session
 ```
-Yet to be written
+SELECT artist, song, user_first_name, user_last_name FROM 
+music_app_user_history WHERE user_id=10 AND session_id=182
+```
+
+Who were the users, listened to a particular song
+```
+SELECT user_first_name, user_last_name FROM music_app_song_history WHERE
+ song='All Hands Against His Own'"
 ```
 ### Authors
 * **Supratim Das** - *Initial work*

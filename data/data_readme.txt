@@ -1,1 +1,0 @@
-dump your activity logs (.csv formatted logs) here

@@ -21,8 +21,8 @@ CREATE TABLE IF NOT EXISTS music_app_user_history
 
 song_table_create = ("""
 CREATE TABLE IF NOT EXISTS music_app_song_history (song text, 
- user_id int, session_id int, user_first_name text, user_last_name text, 
- PRIMARY KEY (song, user_id, session_id));
+ user_id int, user_first_name text, user_last_name text, 
+ PRIMARY KEY (song, user_id));
 """)
 
 
@@ -40,8 +40,8 @@ VALUES (%s, %s, %s, %s, %s, %s, %s);
 """)
 
 song_table_insert = ("""
-INSERT INTO music_app_song_history (song, user_id, session_id, 
-user_first_name, user_last_name) VALUES (%s, %s, %s, %s, %s);
+INSERT INTO music_app_song_history (song, user_id, 
+user_first_name, user_last_name) VALUES (%s, %s, %s, %s);
 """)
 
 # QUERY LISTS
