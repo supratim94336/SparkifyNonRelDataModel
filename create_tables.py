@@ -14,8 +14,7 @@ def create_database(session, keyspace):
                         WITH REPLICATION = 
                         { 'class' : 'SimpleStrategy', 
                           'replication_factor' : 1 };
-                        """
-                        .format(keyspace))
+                        """.format(keyspace))
 
     except Exception as e:
         print(e)
