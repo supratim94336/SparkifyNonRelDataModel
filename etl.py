@@ -13,7 +13,6 @@ def process_session_data(session, query, data):
     :param data:
     :return:
     """
-    # get total number of records found
 
     # read and insert records
     for index, row in data.iterrows():
@@ -29,7 +28,6 @@ def process_user_data(session, query, data):
     :param data:
     :return:
     """
-    # get total number of records found
 
     for index, row in data.iterrows():
         session.execute(query, (row[10], row[8], row[3], row[9], row[0],
@@ -45,7 +43,6 @@ def process_song_data(session, query, data):
     :param data:
     :return:
     """
-    # get total number of records found
 
     for index, row in data.iterrows():
         session.execute(query, (row[9], row[10], row[1], row[4]))
@@ -66,6 +63,7 @@ def main():
 
     # define dataframe
     data = pd.read_csv(file_path, encoding='utf-8')
+    print("No of rows present: {}".format(str(data.shape[0])))
 
     # process the files
     try:
