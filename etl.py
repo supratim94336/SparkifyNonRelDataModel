@@ -1,7 +1,8 @@
 from cassandra.cluster import Cluster
 import pandas as pd
 from sql_queries import session_table_insert, user_table_insert, \
-    song_table_insert
+    song_table_insert, session_id, user_id, song_title, song_duration, \
+    user_first_name, user_last_name, item_in_session, artist
 
 
 def process_session_data(session, query, data):
@@ -16,7 +17,9 @@ def process_session_data(session, query, data):
 
     # read and insert records
     for index, row in data.iterrows():
-        session.execute(query, (row[8], row[3], row[0], row[9], row[5]))
+        session.execute(query, (row[session_id], row[item_in_session],
+                                row[artist], row[song_title],
+                                row[song_duration]))
 
 
 def process_user_data(session, query, data):
@@ -29,9 +32,12 @@ def process_user_data(session, query, data):
     :return:
     """
 
+    # read and insert records
     for index, row in data.iterrows():
-        session.execute(query, (row[10], row[8], row[3], row[9], row[0],
-                                row[1], row[4]))
+        session.execute(query, (row[user_id], row[session_id],
+                                row[item_in_session], row[artist],
+                                row[song_title], row[user_first_name],
+                                row[user_last_name]))
 
 
 def process_song_data(session, query, data):
@@ -44,8 +50,11 @@ def process_song_data(session, query, data):
     :return:
     """
 
+    # read and insert records
     for index, row in data.iterrows():
-        session.execute(query, (row[9], row[10], row[1], row[4]))
+        session.execute(query, (row[song_title], row[user_id],
+                                row[user_first_name],
+                                row[user_last_name]))
 
 
 def main():

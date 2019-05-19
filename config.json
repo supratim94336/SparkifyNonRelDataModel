@@ -1,0 +1,36 @@
+{
+  "tables": {
+      "session_table": {
+         "NAME": "music_app_session_history",
+         "PRIMARY KEY": "(session_id, item_in_session)"
+      },
+      "users_table": {
+        "NAME": "music_app_user_history",
+        "PRIMARY KEY": "((user_id, session_id), item_in_session)"
+      },
+      "songs_table": {
+        "NAME": "music_app_song_history",
+        "PRIMARY KEY": "(song_title, user_id)"
+      }
+  },
+  "table_column_type": {
+    "user_id": "int",
+    "session_id": "int",
+    "item_in_session": "int",
+    "artist": "text",
+    "song_title": "text",
+    "song_duration": "float",
+    "user_first_name": "text",
+    "user_last_name": "text"
+  },
+  "csv_column": {
+      "artist": 0,
+      "user_first_name": 1,
+      "item_in_session": 3,
+      "user_last_name": 4,
+      "song_duration": 5,
+      "session_id": 8,
+      "song_title": 9,
+      "user_id": 10
+    }
+}
