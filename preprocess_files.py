@@ -4,17 +4,17 @@ import csv
 from config import file_path
 
 
-def preprocess_files(all_events_file):
+def preprocess_files(file_path):
     """
     This function processes all the events csv files and creates a final
     csv file with all the non null records/rows found
-    :param all_events_file:
+    :param file_path:
     :return:
     """
     # checking your current working directory
     cur_dir = os.getcwd()
 
-    # Get your current folder and subfolder event data
+    # Get your current folder and sub folder event data
     data_dir = os.path.join(cur_dir, 'event_data')
 
     # Create a for loop to create a list of files and collect each
@@ -45,7 +45,7 @@ def preprocess_files(all_events_file):
                          skipinitialspace=True)
 
     # create one file with all the records
-    with open(all_events_file, 'w', encoding='utf8',
+    with open(file_path, 'w', encoding='utf8',
               newline='') as f:
         writer = csv.writer(f, dialect='myDialect')
         writer.writerow(
@@ -61,7 +61,7 @@ def preprocess_files(all_events_file):
 
 
 def main():
-    preprocess_files(all_events_file=file_path)
+    preprocess_files(file_path=file_path)
 
 
 if __name__ == '__main__':

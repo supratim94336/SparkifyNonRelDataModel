@@ -58,17 +58,17 @@ Go inside the project directory
 ```
 $ cd project_dir_name
 ```
+Change configurations in 
+```
+$ vim config.json
+```
 Run the pre-processing script (you need it only once)
 ```
 $ python preprocess_files.py
 ```
 Run the table creation script (resetting the tables)
 ```
-$ python create_tables.py
-```
-Run the database population script (inserting the records)
-```
-$ python etl.py
+$ python create_data_model.py
 ```
 Test the queries
 ```
@@ -87,20 +87,24 @@ queries like:
 Who were the artist, song, and its duration in a particular session and
 in order 4th
 ```
-SELECT artist, song_title, song_duration FROM music_app_session_history 
+SELECT artist, song_title, song_duration 
+FROM music_app_session_history 
 WHERE session_id=338 AND item_in_session=4
 ```
 
 What artist and his/her song did a user hear in particular session
 ```
-SELECT artist, song, user_first_name, user_last_name FROM 
-music_app_user_history WHERE user_id=10 AND session_id=182
+SELECT artist, song, user_first_name, user_last_name 
+FROM 
+music_app_user_history 
+WHERE user_id=10 AND session_id=182
 ```
 
 Who were the users, listened to a particular song
 ```
-SELECT user_first_name, user_last_name FROM music_app_song_history WHERE
- song='All Hands Against His Own'"
+SELECT user_first_name, user_last_name 
+FROM music_app_song_history 
+WHERE song='All Hands Against His Own'"
 ```
 ### Authors
 * **Supratim Das** - *Initial work*
