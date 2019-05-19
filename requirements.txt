@@ -1,4 +1,4 @@
-pandas
-cassandra-driver
-jupyter
-prettytable
+pandas==0.24.2
+cassandra-driver==3.11.0
+jupyter==1.0.0
+prettytable==0.7.2

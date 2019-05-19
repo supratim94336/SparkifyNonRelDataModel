@@ -1,0 +1,11 @@
+name: NonRelDataModel
+channels:
+- anaconda
+- conda-forge
+- defaults
+dependencies:
+- jupyter==1.0.0=py36_0
+- cassandra-driver==3.11.0=py36_0
+- pip:
+  - prettytable==0.7.2
+  - pandas==0.24.2
