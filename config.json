@@ -1,4 +1,6 @@
 {
+  "file_path": "events_data_new.csv",
+  "keyspace": "sparkify",
   "tables": {
       "session_table": {
          "NAME": "music_app_session_history",

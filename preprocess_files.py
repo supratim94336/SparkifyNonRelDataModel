@@ -1,6 +1,7 @@
 import os
 import glob
 import csv
+from config import file_path
 
 
 def preprocess_files(all_events_file):
@@ -60,8 +61,7 @@ def preprocess_files(all_events_file):
 
 
 def main():
-    file_path = "events_data_new.csv"
-    preprocess_files(file_path)
+    preprocess_files(all_events_file=file_path)
 
 
 if __name__ == '__main__':

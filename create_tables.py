@@ -1,5 +1,6 @@
 from cassandra.cluster import Cluster
 from sql_queries import create_table_queries, drop_table_queries
+from config import keyspace
 
 
 def create_database(session, keyspace):
@@ -64,16 +65,15 @@ def create_tables(session, keyspace):
 def main():
     cluster = Cluster()
     session = cluster.connect()
-    keyspace = "sparkify"
 
     # create the database
-    session = create_database(session, keyspace)
+    session = create_database(session, keyspace=keyspace)
 
     # drop the tables
-    drop_tables(session, keyspace)
+    drop_tables(session, keyspace=keyspace)
 
     # create the tables
-    create_tables(session, keyspace)
+    create_tables(session, keyspace=keyspace)
 
     # close the connection
     session.shutdown()

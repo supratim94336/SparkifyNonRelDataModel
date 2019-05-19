@@ -1,8 +1,10 @@
 from cassandra.cluster import Cluster
 import pandas as pd
+from config import file_path, keyspace, session_id, user_id, \
+    song_title, song_duration, user_first_name, user_last_name, \
+    item_in_session, artist
 from sql_queries import session_table_insert, user_table_insert, \
-    song_table_insert, session_id, user_id, song_title, song_duration, \
-    user_first_name, user_last_name, item_in_session, artist
+    song_table_insert
 
 
 def process_session_data(session, query, data):
@@ -63,12 +65,9 @@ def main():
     session = cluster.connect()
 
     try:
-        session.set_keyspace('sparkify')
+        session.set_keyspace(keyspace=keyspace)
     except Exception as e:
         print(e)
-
-    # define file path of records
-    file_path = "events_data_new.csv"
 
     # define dataframe
     data = pd.read_csv(file_path, encoding='utf-8')
